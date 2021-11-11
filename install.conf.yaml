@@ -1,12 +1,13 @@
 - link:
+    ~/.aliases: aliases
     ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
+    ~/.customrc: customrc 
+    ~/.functions: functions 
+    ~/.gitconfig: gitconfig 
+    ~/.shell.pre-oh-my-zsh: shell.pre-oh-my-zsh
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
-    ~/.aliases: aliases
-    ~/.functions: functions 
-    ~/.customrc: customrc 
-    ~/.shell.pre-oh-my-zsh: shell.pre-oh-my-zsh
     ~/.config/Code/User/keybindings.json:
         path: config/Code/User/keybindings.json
         create: true

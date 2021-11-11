@@ -1,0 +1,35 @@
+[alias]
+	s = status
+	co = checkout
+	c = commit
+	p = push
+	r = rebase
+	ri = rebase -i
+	rom = rebase --onto=master
+	fixup = commit --fixup=HEAD
+	squash = "! git rebase -i origin/`git branch --show-current`"
+	repotag = "! f() { git-repotag "$@"; }; f"
+	# TODO make these commands verbose somehow, possibly rewrite in python
+	rebase-chain = "! git-rebase-chain $@"
+	exec = "! f() { eval "$@"; }; f"
+	for-repo-with-tag="! git-for-repo-with-tag $@"
+	routine-status = "for-repo-with-tag all exec zsh -c 'pwd && echo --------------------- && git status && echo ====================='"
+	routine-push = "for-repo-with-tag push exec zsh -c 'pwd && echo --------------------- && (if git-should-push; then git push origin `git branch --show-current`;fi); echo ====================='"
+[user]
+	email = samuel.melkovic@gmail.com
+	name = koniferous22
+[core]
+	editor = vim
+[fetch]
+	recurseSubmodules = true
+[help]
+	browser = firefox
+[init]
+	defaultBranch = master
+[rebase]
+	autosquash = true
+[gitRepotag]
+	configfile = ~/.gitconfig-tags
+[include]
+	path = ~/.gitconfig-tags
+	path = ~/.gitconfig-profiles
