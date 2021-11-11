@@ -1,0 +1,20 @@
+#!/bin/sh
+# Legacy xD
+alias sum="awk '{s+=\$1} END {print s}'"
+alias notets="date +%Y%m%d"
+alias ubersetzen="dict -d fd-deu-eng"
+alias translate-de="dict -d fc-eng-deu"
+alias beans="echo \"✊🍆✊🍆✊🍆✊🍆✊🍆✊🍆✊🍆✊🍆🌊🌊🌊🌊🌊🌊🌊🌊\""
+alias pip-upgrade="pip freeze --user | cut -d'=' -f1 | xargs -n1 pip install -U"
+alias pip-upgrade-venv="pip freeze | cut -d'=' -f1 | xargs -n1 pip install -U"
+alias convert-mp3="find . -type f -exec sh -c 'ffmpeg -i \"{}\" \"$(basename \"{}\" .wav).mp3\"' \;"
+
+# Notetaking
+alias update-notes="$NOTES_PATH/update.sh"
+alias push-notes="$NOTES_PATH/push.sh"
+alias un="update-notes"
+alias nu="update-notes"
+alias np="push-notes"
+
+# Airflow
+alias airflow-date="date +%Y-%m-%d"

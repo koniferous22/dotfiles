@@ -1,0 +1,16 @@
+- link:
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.zshenv: zshenv
+    ~/.zshrc: zshrc
+    ~/.aliases: aliases
+    ~/.functions: functions 
+    ~/.customrc: customrc 
+    ~/.shell.pre-oh-my-zsh: shell.pre-oh-my-zsh
+    ~/.config/Code/User/keybindings.json:
+        path: config/Code/User/keybindings.json
+        create: true
+    ~/.config/Code/User/settings.json:
+        path: config/Code/User/settings.json
+        create: true
+- clean: ['~']

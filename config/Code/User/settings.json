@@ -1,0 +1,53 @@
+{
+    "bracket-pair-colorizer-2.forceUniqueOpeningColor": true,
+    "bracket-pair-colorizer-2.showHorizontalScopeLine": false,
+    "bracket-pair-colorizer-2.showVerticalScopeLine": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.markdownlint": true
+    },
+    "editor.lineNumbers": "relative",
+    "editor.lineHeight": 13,
+    "editor.suggestSelection": "first",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "markdownlint.config": {
+        "MD013": false,
+        "MD024": false,
+        "MD025": false,
+        "MD046": false
+    },
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-b>": false,
+        "<C-c>": false,
+        "<C-d>": false,
+        "<C-g>": false,
+        "<C-h>": false,
+        "<C-k>": false,
+        "<C-l>": false,
+        "<C-m>": false,
+        "<C-i>": false,
+        "<C-u>": false,
+        "<C-w>": false,
+        "<C-1>": false
+    },
+    "vim.useSystemClipboard": true,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "zenMode.hideLineNumbers": false,
+    "workbench.editor.showTabs": false,
+    "elixirLS.dialyzerEnabled": false,
+    "files.associations": {
+        ".env": "shellscript"
+    },
+    "workbench.statusBar.visible": false
+}

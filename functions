@@ -1,0 +1,9 @@
+#!/bin/sh
+
+function go2dir() {
+	cd `dirname $(which $1)`
+}
+
+function sanitize-space() {
+	mv "$1" `echo "$1" | tr ' ' '-'`
+}
