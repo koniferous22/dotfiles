@@ -22,3 +22,4 @@ alias airflow-date="date +%Y-%m-%d"
 # Dotfiles
 alias sync-dotfiles="dotbot -c $DOTFILES_PATH/install.conf.yaml"
 alias sync-secrets="dotbot -c $SECRETS_PATH/install.conf.yaml"
+alias sync-settings="dconf dump / > $SETTINGS_PATH/user.conf"
