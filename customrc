@@ -1,0 +1,33 @@
+# Unified config for both zshrc and bashrc
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+
+# [nvm] 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# [gvm]
+export GVM_DIR="$HOME/.gvm"
+[[ -s "$GVM_DIR/scripts/gvm" ]] && source "$GVM_DIR/scripts/gvm"
+
+# [ghcup]
+[ -f "/home/konyferous/.ghcup/env" ] && source "/home/konyferous/.ghcup/env" # ghcup-env
+
+# [Sh-utils import]
+sh_utils_functions_path="$SHUTILS_PATH/functions"
+if [[ -f "$sh_utils_functions_path" ]]; then
+	source "$sh_utils_functions_path"
+else
+	echo "${RED}Scripting SDK \"$sh_utils_functions_path\" not found${RESET}" >&2
+    # Note background/non-blocking processes don't work properly in bashrc
+    mpg123 -q "$SOUNDBOARD_PATH/dotfiles/customrc-sh-utils-import-fail.mp3"
+fi
+
+. $HOME/.aliases
+. $HOME/.runtime_env
+

@@ -1,0 +1,20 @@
+- clean: ['~', '~/.config/Code/User']
+- link:
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.colors: colors
+    ~/.customrc: customrc 
+    ~/.gitconfig: gitconfig 
+    ~/.shell.pre-oh-my-zsh: shell.pre-oh-my-zsh
+    ~/.zshenv: zshenv
+    ~/.zshrc: zshrc
+    ~/.config/ranger/rifle.conf: config/ranger/rifle.conf
+    ~/.config/Code/User/keybindings.json:
+        path: config/Code/User/keybindings.json
+        create: true
+    ~/.config/Code/User/settings.json:
+        path: config/Code/User/settings.json
+        create: true
+    # This points to ohmyz repository, but custom theme should be in `.gitignore`d section
+    ~/.oh-my-zsh/custom/themes/koniferski.zsh-theme:
+        path: oh-my-zsh/custom/themes/koniferski.zsh-theme
