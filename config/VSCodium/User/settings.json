@@ -1,0 +1,145 @@
+{
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.markdownlint": true
+    },
+    "editor.lineNumbers": "relative",
+    "editor.lineHeight": 13,
+    "editor.suggestSelection": "first",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "markdownlint.config": {
+        "MD013": false,
+        "MD024": false,
+        "MD025": false,
+        "MD046": false
+    },
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-b>": false,
+        "<C-c>": false,
+        "<C-d>": false,
+        "<C-g>": false,
+        "<C-h>": false,
+        "<C-k>": false,
+        "<C-l>": false,
+        "<C-m>": false,
+        "<C-i>": false,
+        "<C-u>": false,
+        "<C-w>": false,
+        "<C-1>": false
+    },
+    "vim.useSystemClipboard": true,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "zenMode.hideLineNumbers": false,
+    "workbench.editor.showTabs": "single",
+    "files.associations": {
+        ".env": "shellscript"
+    },
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "gopls": {
+
+    },
+    "commentAnchors.tags.anchors": {
+        "ANCHOR": {
+            "iconColor": "default",
+            "highlightColor": "#A8C023",
+            "scope": "file",
+            "styleComment": true
+        },
+        "TODO": {
+            "iconColor": "orange",
+            "highlightColor": "orange",
+            "scope": "workspace",
+            "styleComment": true
+        },
+        "FIXME": {
+            "iconColor": "red",
+            "highlightColor": "#F44336",
+            "scope": "workspace",
+            "styleComment": true
+        },
+        "CONFIG_TYPE": {
+            "iconColor": "purple",
+            "highlightColor": "#BA68C8",
+            "scope": "file",
+            "styleComment": true
+        },
+        "CONFIG_ENV_VARIABLE": {
+            "iconColor": "purple",
+            "highlightColor": "#BA68C8",
+            "scope": "file",
+            "styleComment": true
+        },
+        "CONFIG_USE_CASE": {
+            "iconColor": "purple",
+            "highlightColor": "#BA68C8",
+            "scope": "file",
+            "styleComment": true
+        },
+        "STUB": {
+            "iconColor": "purple",
+            "highlightColor": "#BA68C8",
+            "scope": "file",
+            "styleComment": true
+        },
+        "NOTE": {
+            "iconColor": "yellow",
+            "highlightColor": "#FFB300",
+            "scope": "file",
+            "styleComment": true
+        },
+        "REVIEW": {
+            "iconColor": "green",
+            "highlightColor": "#64DD17",
+            "scope": "workspace",
+            "styleComment": true
+        },
+        "SECTION": {
+            "iconColor": "blurple",
+            "highlightColor": "#896afc",
+            "scope": "workspace",
+            "behavior": "region",
+            "styleComment": true
+        },
+        "LINK": {
+            "iconColor": "#2ecc71",
+            "highlightColor": "#2ecc71",
+            "scope": "workspace",
+            "behavior": "link",
+            "styleComment": true
+        },
+        "LINKNOTE": {
+            "iconColor": "#2ecc71",
+            "highlightColor": "#2ecc71",
+            "scope": "workspace",
+            "styleComment": true
+        },
+        "MITIGATION": {
+            "iconColor": "#2ecc71",
+            "highlightColor": "#2ecc71",
+            "scope": "file",
+            "styleComment": true
+        }
+    },
+    "git.openRepositoryInParentFolders": "never",
+    "window.zoomLevel": -1,
+    "haskell.manageHLS": "GHCup",
+    "explorer.confirmDelete": false,
+    "haskell.trace.server": "verbose",
+    "gitlens.advanced.messages": {
+        "suppressGitVersionWarning": true
+    }
+
+}

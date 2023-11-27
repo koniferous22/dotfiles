@@ -147,7 +147,7 @@ chpwd_functions+=("zsh_chpwd_play_mp3")
 # │ CUSTOM PLUGIN NOTES - END │
 # │                           │
 # └───────────────────────────┘
-plugins=(ansible aws cabal catimg dnf docker docker-compose emoji gcloud gh golang grc heroku history-substring-search istioctl jenv juju kitchen knife knife_ssh kops kubectl lxd minikube mosh node npm nvm pep8 perl pip pipenv pm2 poetry pylint python rails rake-fast react-native redis-cli rsync ruby rust rvm salt scala spring sprunge stack sublime sudo swiftpm terraform themes timer torrent tugboat ufw vagrant yarn web-search)
+plugins=(ansible aws cabal bgnotify catimg colorize dnf docker docker-compose emoji gcloud gh golang grc heroku history-substring-search istioctl jenv juju kitchen knife knife_ssh kops kubectl lxd minikube mosh node npm nvm pep8 perl pip pipenv pm2 poetry pylint python rails rake-fast react-native redis-cli rsync ruby rust rvm salt scala spring sprunge stack sublime sudo swiftpm terraform themes timer torrent tugboat ufw vagrant yarn web-search)
 
 # ┌─────────────────────────────────────┐
 # │                                     │
@@ -158,10 +158,13 @@ plugins=(ansible aws cabal catimg dnf docker docker-compose emoji gcloud gh gola
 ZSH_WEB_SEARCH_ENGINES=(
     wikipedia "https://en.wikipedia.org/w/index.php?search="
 )
-# "vi-mode" plugin configuration
-VI_MODE_SET_CURSOR=true
-MODE_INDICATOR="%F{white}+%f"
-INSERT_MODE_INDICATOR="%F{yellow}+%f"
+
+# "bgnotify" plugin configuration
+bgnotify_threshold=6
+
+# "colorize" plugin configuration
+ZSH_COLORIZE_TOOL=chroma
+ZSH_COLORIZE_STYLE="colorful"
 
 # ┌───────────────────────────────────┐
 # │                                   │

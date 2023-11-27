@@ -1,4 +1,4 @@
-- clean: ['~', '~/.config/Code/User']
+- clean: ['~', '~/.config/Code/User', ~/.config/Codium/User']
 - link:
     ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
@@ -14,6 +14,12 @@
         create: true
     ~/.config/Code/User/settings.json:
         path: config/Code/User/settings.json
+        create: true
+    ~/.config/VSCodium/User/keybindings.json:
+        path: config/VSCodium/User/keybindings.json
+        create: true
+    ~/.config/VSCodium/User/settings.json:
+        path: config/VSCodium/User/settings.json
         create: true
     # This points to ohmyz repository, but custom theme should be in `.gitignore`d section
     ~/.oh-my-zsh/custom/themes/koniferski.zsh-theme:
