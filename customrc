@@ -28,6 +28,6 @@ else
     mpg123 -q "$SOUNDBOARD_PATH/dotfiles/customrc-sh-utils-import-fail.mp3"
 fi
 
-. $HOME/.aliases
 . $HOME/.runtime_env
+. $HOME/.aliases
 
