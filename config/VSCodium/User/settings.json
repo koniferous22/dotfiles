@@ -134,12 +134,12 @@
         }
     },
     "git.openRepositoryInParentFolders": "never",
-    "window.zoomLevel": -1,
     "haskell.manageHLS": "GHCup",
     "explorer.confirmDelete": false,
     "haskell.trace.server": "verbose",
     "gitlens.advanced.messages": {
         "suppressGitVersionWarning": true
-    }
+    },
+    "window.zoomLevel": -1
 
 }
