@@ -1,7 +1,7 @@
 {
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.codeActionsOnSave": {
-        "source.fixAll.markdownlint": true
+        "source.fixAll.markdownlint": "explicit"
     },
     "editor.lineNumbers": "relative",
     "editor.lineHeight": 13,
@@ -140,6 +140,7 @@
     "gitlens.advanced.messages": {
         "suppressGitVersionWarning": true
     },
-    "window.zoomLevel": -1
+    "window.zoomLevel": -1,
+    "redhat.telemetry.enabled": false
 
 }
