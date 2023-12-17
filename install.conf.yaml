@@ -24,3 +24,11 @@
     # This points to ohmyz repository, but custom theme should be in `.gitignore`d section
     ~/.oh-my-zsh/custom/themes/koniferski.zsh-theme:
         path: oh-my-zsh/custom/themes/koniferski.zsh-theme
+        create: true
+    ~/.oh-my-zsh/custom/plugins/todolist_json2tex/todolist_json2tex.plugin.zsh:
+        path: oh-my-zsh/custom/plugins/todolist_json2tex/todolist_json2tex.plugin.zsh
+        create: true
+    ~/.bash_completion.d/todolist-json2tex:
+        path: bash-completion.d/todolist-json2tex
+        create: true
+
