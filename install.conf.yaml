@@ -21,6 +21,9 @@
     ~/.config/VSCodium/User/settings.json:
         path: config/VSCodium/User/settings.json
         create: true
+    ~/.nvm/default-packages:
+        path: nvm/default-packages
+        create: true
     # This points to ohmyz repository, but custom theme should be in `.gitignore`d section
     ~/.oh-my-zsh/custom/themes/koniferski.zsh-theme:
         path: oh-my-zsh/custom/themes/koniferski.zsh-theme
