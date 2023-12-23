@@ -16,12 +16,19 @@ arrow_end() {
    echo "%b%{$reset_color%}%{$FG[$NEXT_ARROW_FG]%}%{$BG[$NEXT_ARROW_BG]%}$(right_triangle)%{$reset_color%}"
 }
 
+location_override_notifier() {
+   if [[ $LOCATION_OVERRIDE ]]; then
+      echo "[OVERRIDDEN] "
+   fi
+}
+
 location () {
    ARROW_FG="016"
    ARROW_BG="015"
    NEXT_ARROW_BG="183"
    NEXT_ARROW_FG="015"
-   echo "$(arrow_start) $LOCATION $(arrow_end)"
+   OVERRIDE_NOTIFIER=
+   echo "$(arrow_start) $LOCATION $(location_override_notifier)$(arrow_end)"
 }
 
 directory() {
