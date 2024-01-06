@@ -140,7 +140,7 @@
     "gitlens.advanced.messages": {
         "suppressGitVersionWarning": true
     },
-    "window.zoomLevel": -1,
-    "redhat.telemetry.enabled": false
+    "redhat.telemetry.enabled": false,
+    "window.zoomLevel": -1
 
 }
