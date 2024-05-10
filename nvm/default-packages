@@ -2,3 +2,5 @@ typescript
 tsx
 concurrently
 prettier
+pnpm
+yarn
