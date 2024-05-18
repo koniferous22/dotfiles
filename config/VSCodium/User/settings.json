@@ -142,6 +142,7 @@
     },
     "redhat.telemetry.enabled": false,
     "window.zoomLevel": -1,
-    "editor.unicodeHighlight.nonBasicASCII": false
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "prisma.showPrismaDataPlatformNotification": false
 
 }
