@@ -142,12 +142,14 @@ chpwd_functions+=("zsh_chpwd_play_mp3")
 # `grcat` from "grc"
 # `sprunge` from "sprunge"
 # `manget_to_torrent` from "torrent"
+# [`qerko` - dependencies]
+# * direnv - project-scoped env variables reload
 # ┌───────────────────────────┐
 # │                           │
 # │ CUSTOM PLUGIN NOTES - END │
 # │                           │
 # └───────────────────────────┘
-plugins=(ansible aws cabal bgnotify catimg colorize dnf docker docker-compose emoji gcloud gh golang grc heroku history-substring-search istioctl jenv juju kitchen knife knife_ssh kops kubectl lxd minikube mosh node npm nvm pep8 perl pip pipenv pm2 poetry pylint python rails rake-fast react-native redis-cli rsync ruby rust rvm salt scala spring sprunge stack sublime sudo swiftpm terraform themes timer torrent tugboat ufw vagrant yarn web-search todolist_json2tex)
+plugins=(ansible aws cabal bgnotify catimg colorize dnf direnv docker docker-compose emoji gcloud gh golang grc heroku history-substring-search istioctl jenv juju kitchen knife knife_ssh kops kubectl lxd minikube mosh node npm nvm pep8 perl pip pipenv pm2 poetry pylint python rails rake-fast react-native redis-cli rsync ruby rust rvm salt scala spring sprunge stack sublime sudo swiftpm terraform themes timer torrent tugboat ufw vagrant yarn web-search todolist_json2tex)
 
 # ┌─────────────────────────────────────┐
 # │                                     │

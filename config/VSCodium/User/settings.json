@@ -143,6 +143,7 @@
     "redhat.telemetry.enabled": false,
     "window.zoomLevel": -1,
     "editor.unicodeHighlight.nonBasicASCII": false,
-    "prisma.showPrismaDataPlatformNotification": false
+    "prisma.showPrismaDataPlatformNotification": false,
+    "workbench.startupEditor": "none"
 
 }
