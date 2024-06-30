@@ -142,8 +142,6 @@ chpwd_functions+=("zsh_chpwd_play_mp3")
 # `grcat` from "grc"
 # `sprunge` from "sprunge"
 # `manget_to_torrent` from "torrent"
-# [`qerko` - dependencies]
-# * direnv - project-scoped env variables reload
 # ┌───────────────────────────┐
 # │                           │
 # │ CUSTOM PLUGIN NOTES - END │
