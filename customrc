@@ -1,33 +1,88 @@
+#!/usr/bin/env sh
+
 # Unified config for both zshrc and bashrc
 
-# User specific environment
+# ┌───────────────────────────┐
+# │                           │
+# │ User specific environment │
+# │                           │
+# └───────────────────────────┘
+
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 
-# [nvm] 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# ┌────────────────────────┐
+# │                        │
+# │ Wayland-specific setup │
+# │                        │
+# └────────────────────────┘
+
+MOZ_ENABLE_WAYLAND=
+if [[ $DESKTOP_SESSION = sway ]]; then
+    MOZ_ENABLE_WAYLAND=1
+fi
+export MOZ_ENABLE_WAYLAND
+
+# ┌───────────────────────────────────────────┐
+# │                                           │
+# │ Utils outside of scope of package manager │
+# │                                           │
+# └───────────────────────────────────────────┘
+
+# [nvm]
+source /usr/share/nvm/init-nvm.sh
 
 # [gvm]
 export GVM_DIR="$HOME/.gvm"
 [[ -s "$GVM_DIR/scripts/gvm" ]] && source "$GVM_DIR/scripts/gvm"
-
+[[ -s "/home/konyferous/.gvm/scripts/gvm" ]] && source "/home/konyferous/.gvm/scripts/gvm"
 # [ghcup]
 [ -f "/home/konyferous/.ghcup/env" ] && source "/home/konyferous/.ghcup/env" # ghcup-env
 
-# [Sh-utils import]
-sh_utils_functions_path="$SHUTILS_PATH/functions"
-if [[ -f "$sh_utils_functions_path" ]]; then
-	source "$sh_utils_functions_path"
-else
-	echo "${RED}Scripting SDK \"$sh_utils_functions_path\" not found${RESET}" >&2
-    # Note background/non-blocking processes don't work properly in bashrc
-    mpg123 -q "$SOUNDBOARD_PATH/dotfiles/customrc-sh-utils-import-fail.mp3"
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOMEbin:$PATH"
 fi
 
-. $HOME/.runtime_env
-. $HOME/.aliases
+# ┌────────────────────────────────────────────┐
+# │                                            │
+# │ Dynamically resolved environment variables │
+# │                                            │
+# └────────────────────────────────────────────┘
 
+# [shlib] - shlib import
+
+# 1 - import required configuration for shlib import
+source "$HOME/.shlib"
+# 2 - import shlib
+source "$SHLIB_PATH/export/shlib"
+shlib_import_path="$SHLIB_PATH/export/shlib"
+if [[ -f "$shlib_import_path" ]]; then
+	source "$shlib_import_path"
+else
+	echo "${RED}Scripting SDK \"$shlib_import_path\" not found${RESET}" >&2
+    # Note background/non-blocking processes don't work properly in bashrc
+    mpg123 -q "$SOUNDBOARD_PATH/dotfiles/customrc-shlib-import-fail.mp3"
+fi
+# 3 - resolve shlib dependant variables
+# Note - this can be possibly merged with .dynamic variables
+# * however, there should be utils to bootstrap dynamic variables and installation script
+#   * to make this
+# There could be predefined scope of variables
+export LOCATION=za
+
+# ┌──────┐
+# │      │
+# │ Rest │
+# │      │
+# └──────┘
+
+if [[ -f $HOME/.shellpatch ]]; then
+    source $HOME/.shellpatch
+else
+    echo "${YELLOW}.shellpatch file \"$HOME/.shellpatch\" not loaded${RESET}" >&2
+fi
+source $HOME/.aliases
